@@ -1,0 +1,39 @@
+number = [5,89,9,3,20]
+number.sort()
+print(number)
+
+def second(elem):
+    return elem[1]   # here 1 is the index number
+
+l1 = [(2, 5), (6, 8), (8, 9), (3, 2)]
+l1.sort(key=second)
+print(l1)
+
+l3 = [ {'name': 'manasa', 'age': 25, 'office': 'IBM'},
+       {'name': 'mansa', 'age': 23, 'office': 'Cog'},
+       {'name': 'manu', 'age': 20, 'office': 'Google'}
+    ]
+def get_name(l3):
+    return l3.get('name')
+
+def get_age(l3):
+    return l3.get('age')
+
+def get_office(l3):
+    return l3.get('office')
+
+l3.sort(key=get_name)
+print(l3)
+l3.sort(key=get_age)
+print(l3)
+l3.sort(key=get_office, reverse=True)  #reverse=true sorts in Descending order
+print(l3)
+
+
+l2 = [ {'name': 'manasa', 'age': 25, 'office': 'IBM'},
+       {'name': 'mansa', 'age': 23, 'office': 'Cog'},
+       {'name': 'manu', 'age': 20, 'office': 'Google'}
+    ]
+l2.sort(key=lambda x: x.get('name'))   #sorts by name
+print(l2)
+
