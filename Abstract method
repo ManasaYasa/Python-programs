@@ -1,0 +1,25 @@
+from abc import ABC,abstractmethod
+
+#abstract class
+
+class mobile(ABC):
+
+    @abstractmethod
+    def camera(self):
+        pass
+
+class Oneplus(mobile):
+    def camera(self):
+        print("the camera specs are : 40MP")
+
+class Samsung(mobile):
+    def camera(self):
+        print("the camera specs are : 20MP")
+
+class mi(mobile):
+    def camera(self):
+        print("the camera specs are : 10MP")
+
+m1 = Oneplus()
+m2 = Samsung()
+m3 = mi()
